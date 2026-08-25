@@ -1,0 +1,10 @@
+import{j as e}from"./iframe---5o4ase.js";import{P as n,S as r,b as t}from"./feedback-D7f1FAkh.js";import{S as i}from"./primitives-C5LrcpxH.js";import"./preload-helper-PPVm8Dsz.js";import"./button-DO9wmuJe.js";import"./index-BxxSYZrV.js";import"./index-DHklY11n.js";import"./cn-yMAG7bfM.js";import"./index-CQy5pj3s.js";import"./index-7Unjisul.js";const h={title:"DLS/06 Components/Loading/Progress",tags:["autodocs","canonical","component","beta"]},a={name:"Spinner",render:()=>e.jsxs("div",{className:"flex items-center gap-6",children:[e.jsx(t,{size:"small",label:"Loading compact control"}),e.jsx(t,{label:"Loading records"}),e.jsx(t,{size:"large",label:"Loading workspace"})]})},s={name:"Skeleton",render:()=>e.jsxs(i,{children:[e.jsx(r,{width:"quarter"}),e.jsx(r,{width:"half"}),e.jsx(r,{width:"threeQuarter"}),e.jsx(r,{})]})},o={name:"Progress bar",render:()=>e.jsx("div",{className:"max-w-xl",children:e.jsx(n,{label:"Uploading bank statement",value:68})})};a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:`{
+  name: 'Spinner',
+  render: () => <div className="flex items-center gap-6"><Spinner size="small" label="Loading compact control" /><Spinner label="Loading records" /><Spinner size="large" label="Loading workspace" /></div>
+}`,...a.parameters?.docs?.source}}};s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
+  name: 'Skeleton',
+  render: () => <Stack><Skeleton width="quarter" /><Skeleton width="half" /><Skeleton width="threeQuarter" /><Skeleton /></Stack>
+}`,...s.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+  name: 'Progress bar',
+  render: () => <div className="max-w-xl"><ProgressBar label="Uploading bank statement" value={68} /></div>
+}`,...o.parameters?.docs?.source}}};const b=["SpinnerSizes","SkeletonWidths","ProgressBarDefault"];export{o as ProgressBarDefault,s as SkeletonWidths,a as SpinnerSizes,b as __namedExportsOrder,h as default};

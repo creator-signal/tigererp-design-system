@@ -1,0 +1,31 @@
+import{j as e,r as x}from"./iframe---5o4ase.js";import{S as h,G as S}from"./primitives-C5LrcpxH.js";import{C as p,F as a,T as s,S as v,a as b,R as f,b as g}from"./fields-B4nvBeow.js";import"./preload-helper-PPVm8Dsz.js";import"./index-CQy5pj3s.js";import"./index-7Unjisul.js";import"./index-BxxSYZrV.js";import"./cn-yMAG7bfM.js";const{expect:j,userEvent:w,within:F}=__STORYBOOK_MODULE_TEST__,G={title:"DLS/06 Components/Forms/Field Controls",tags:["autodocs","canonical","component","beta"],parameters:{docs:{description:{component:"Shared form contracts associate labels, guidance, validation, density, and native semantics. Product surfaces consume these controls instead of styling inputs locally."}}}},n={render:()=>e.jsx("div",{className:"max-w-md",children:e.jsx(a,{label:"Organisation name",description:"Shown on invoices, reports, and customer communications.",required:!0,children:e.jsx(s,{defaultValue:"Acacia Holdings"})})})},i={name:"Text field states",render:()=>e.jsxs(S,{columns:2,children:[e.jsx(a,{label:"Default",children:e.jsx(s,{placeholder:"Enter a reference"})}),e.jsx(a,{label:"Dense",children:e.jsx(s,{density:"dense",defaultValue:"INV-1049"})}),e.jsx(a,{label:"Invalid allocation",error:"Use a unique journal reference.",children:e.jsx(s,{defaultValue:"JE-07204"})}),e.jsx(a,{label:"System identifier",description:"Generated after posting.",children:e.jsx(s,{disabled:!0,value:"Pending",readOnly:!0})})]})},o={name:"Text area",render:()=>e.jsx("div",{className:"max-w-xl",children:e.jsx(a,{label:"Review note",description:"Explain the evidence supporting this classification.",optional:!0,children:e.jsx(b,{defaultValue:"Matched to the signed supplier agreement."})})})},l={name:"Select",render:()=>e.jsx("div",{className:"max-w-md",children:e.jsx(a,{label:"Default display currency",children:e.jsxs(v,{defaultValue:"AUD",children:[e.jsx("option",{value:"AUD",children:"Australian dollar (AUD)"}),e.jsx("option",{value:"NZD",children:"New Zealand dollar (NZD)"}),e.jsx("option",{value:"USD",children:"United States dollar (USD)"})]})})})},c={name:"Checkbox",render:()=>e.jsxs(h,{children:[e.jsx(p,{label:"Include archived accounts",description:"Archived accounts remain unavailable for new postings."}),e.jsx(p,{label:"Approved by policy",defaultChecked:!0}),e.jsx(p,{label:"Unavailable option",disabled:!0})]})};function T(){const[t,r]=x.useState("GST10");return e.jsx(f,{legend:"Tax treatment",name:"tax-treatment",value:t,onValueChange:r,options:[{value:"GST10",label:"GST on expenses",description:"Standard 10% input-tax treatment."},{value:"GSTFREE",label:"GST free",description:"No GST applies to this transaction."},{value:"EXCLUDED",label:"Excluded",description:"Not reported on the activity statement."}]})}const d={name:"Radio group",render:()=>e.jsx(T,{})};function y(){const[t,r]=x.useState(!1);return e.jsx(g,{label:"Reduce motion",description:"Removes non-essential transitions while preserving state changes.",checked:t,onCheckedChange:r})}const u={name:"Switch",render:()=>e.jsx("div",{className:"max-w-xl",children:e.jsx(y,{})}),play:async({canvasElement:t})=>{const m=F(t).getByRole("switch",{name:/^Reduce motion/});await w.click(m),await j(m).toBeChecked()}};n.parameters={...n.parameters,docs:{...n.parameters?.docs,source:{originalSource:`{
+  render: () => <div className="max-w-md"><Field label="Organisation name" description="Shown on invoices, reports, and customer communications." required><TextField defaultValue="Acacia Holdings" /></Field></div>
+}`,...n.parameters?.docs?.source}}};i.parameters={...i.parameters,docs:{...i.parameters?.docs,source:{originalSource:`{
+  name: 'Text field states',
+  render: () => <Grid columns={2}><Field label="Default"><TextField placeholder="Enter a reference" /></Field><Field label="Dense"><TextField density="dense" defaultValue="INV-1049" /></Field><Field label="Invalid allocation" error="Use a unique journal reference."><TextField defaultValue="JE-07204" /></Field><Field label="System identifier" description="Generated after posting."><TextField disabled value="Pending" readOnly /></Field></Grid>
+}`,...i.parameters?.docs?.source}}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+  name: 'Text area',
+  render: () => <div className="max-w-xl"><Field label="Review note" description="Explain the evidence supporting this classification." optional><TextArea defaultValue="Matched to the signed supplier agreement." /></Field></div>
+}`,...o.parameters?.docs?.source}}};l.parameters={...l.parameters,docs:{...l.parameters?.docs,source:{originalSource:`{
+  name: 'Select',
+  render: () => <div className="max-w-md"><Field label="Default display currency"><Select defaultValue="AUD"><option value="AUD">Australian dollar (AUD)</option><option value="NZD">New Zealand dollar (NZD)</option><option value="USD">United States dollar (USD)</option></Select></Field></div>
+}`,...l.parameters?.docs?.source}}};c.parameters={...c.parameters,docs:{...c.parameters?.docs,source:{originalSource:`{
+  name: 'Checkbox',
+  render: () => <Stack><Checkbox label="Include archived accounts" description="Archived accounts remain unavailable for new postings." /><Checkbox label="Approved by policy" defaultChecked /><Checkbox label="Unavailable option" disabled /></Stack>
+}`,...c.parameters?.docs?.source}}};d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
+  name: 'Radio group',
+  render: () => <RadioSpecimen />
+}`,...d.parameters?.docs?.source}}};u.parameters={...u.parameters,docs:{...u.parameters?.docs,source:{originalSource:`{
+  name: 'Switch',
+  render: () => <div className="max-w-xl"><SwitchSpecimen /></div>,
+  play: async ({
+    canvasElement
+  }) => {
+    const canvas = within(canvasElement);
+    const control = canvas.getByRole('switch', {
+      name: /^Reduce motion/
+    });
+    await userEvent.click(control);
+    await expect(control).toBeChecked();
+  }
+}`,...u.parameters?.docs?.source}}};const V=["CompleteField","TextFieldStates","TextAreaStates","SelectStates","CheckboxStates","RadioGroupOptions","SwitchStates"];export{c as CheckboxStates,n as CompleteField,d as RadioGroupOptions,l as SelectStates,u as SwitchStates,o as TextAreaStates,i as TextFieldStates,V as __namedExportsOrder,G as default};
